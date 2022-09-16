@@ -1,13 +1,13 @@
 Package: covdepGE
 Title: Covariate Dependent Graph Estimation
-Version: 1.0.0
+Version: 1.0.1
 Authors@R: 
     c(person("Jacob", "Helwig", email = "jacob.a.helwig@tamu.edu", role = c("cre", "aut")),
     person("Sutanoy", "Dasgupta", email = "sutanoy@stat.tamu.edu", role = c("aut")),
     person("Peng", "Zhao", email = "pzhao@stat.tamu.edu", role = c("aut")),
     person("Bani", "Mallick", email = "bmallick@stat.tamu.edu", role = c("aut")),
     person("Debdeep", "Pati", email = "debdeep@stat.tamu.edu", role = c("aut")))
-Date: 2022-08-14
+Date: 2022-09-16
 Language: en-US
 BugReports: https://github.com/JacobHelwig/covdepGE/issues
 URL: https://github.com/JacobHelwig/covdepGE
@@ -21,7 +21,7 @@ Imports: doParallel, foreach, ggplot2, glmnet, latex2exp, MASS,
 Suggests: testthat (>= 3.0.0), covr, vdiffr
 Config/testthat/edition: 3
 NeedsCompilation: yes
-Packaged: 2022-08-23 13:24:47 UTC; jacob
+Packaged: 2022-09-16 15:25:55 UTC; jacob.a.helwig
 Author: Jacob Helwig [cre, aut],
   Sutanoy Dasgupta [aut],
   Peng Zhao [aut],
@@ -29,4 +29,4 @@ Author: Jacob Helwig [cre, aut],
   Debdeep Pati [aut]
 Maintainer: Jacob Helwig <jacob.a.helwig@tamu.edu>
 Repository: CRAN
-Date/Publication: 2022-08-24 08:22:38 UTC
+Date/Publication: 2022-09-16 15:56:08 UTC

@@ -1,4 +1,6 @@
 ## -----------------------------------------------------------------------------
+## Distributed under GPL (≥ 3) license
+#'
 #' @title Generate Covariate-Dependent Data
 #' @export
 ## -----------------------------DESCRIPTION-------------------------------------
@@ -86,6 +88,7 @@
 #' interval.
 ## -----------------------------EXAMPLES----------------------------------------
 #' @examples
+#' \dontrun{
 #' library(ggplot2)
 #'
 #' # get the data
@@ -125,12 +128,13 @@
 #'                  n1 + n2 + 1, ",...,", n1 + n2 + n3))
 #'
 #' # fit the model and visualize the estimated graphs
-#' (out <- covdepGE(X, Z, nssq = 2, nsbsq = 2, npip = 2))
+#' (out <- covdepGE(X, Z))
 #' plot(out)
 #'
 #' # visualize the posterior inclusion probabilities for variables (1, 3) and (1, 2)
 #' inclusionCurve(out, 1, 2)
 #' inclusionCurve(out, 1, 3)
+#' }
 ## -----------------------------------------------------------------------------
 generateData <- function(p = 5, n1 = 60, n2 = 60, n3 = 60, Z = NULL,
                          true_precision = NULL){

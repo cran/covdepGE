@@ -1,4 +1,6 @@
 ## -----------------------------------------------------------------------------
+## Distributed under GPL (≥ 3) license
+#'
 #' @title Visualize a matrix
 #' @export
 ## -----------------------------------------------------------------------------
@@ -34,6 +36,7 @@
 #' @return Returns `ggplot2` visualization of matrix
 ## -----------------------------EXAMPLES----------------------------------------
 #' @examples
+#' \dontrun{
 #' library(ggplot2)
 #'
 #' # get the data
@@ -73,12 +76,13 @@
 #'                  n1 + n2 + 1, ",...,", n1 + n2 + n3))
 #'
 #' # fit the model and visualize the estimated graphs
-#' (out <- covdepGE(X, Z, nssq = 2, nsbsq = 2, npip = 2))
+#' (out <- covdepGE(X, Z))
 #' plot(out)
 #'
 #' # visualize the posterior inclusion probabilities for variables (1, 3) and (1, 2)
 #' inclusionCurve(out, 1, 2)
 #' inclusionCurve(out, 1, 3)
+#' }
 ## -----------------------------------------------------------------------------
 matViz <- function(x, color1 = "white", color2 = "#500000",
                    grid_color = "black", incl_val = FALSE, prec = 2,
@@ -162,6 +166,8 @@ matViz <- function(x, color1 = "white", color2 = "#500000",
 }
 
 ## -----------------------------------------------------------------------------
+## Distributed under GPL (≥ 3) license
+#'
 #' @title Plot PIP as a Function of Index
 #' @export
 ## -----------------------------------------------------------------------------
@@ -197,6 +203,7 @@ matViz <- function(x, color1 = "white", color2 = "#500000",
 #' @return Returns `ggplot2` visualization of inclusion probability curve
 ## -----------------------------EXAMPLES----------------------------------------
 #' @examples
+#' \dontrun{
 #' library(ggplot2)
 #'
 #' # get the data
@@ -236,12 +243,13 @@ matViz <- function(x, color1 = "white", color2 = "#500000",
 #'                  n1 + n2 + 1, ",...,", n1 + n2 + n3))
 #'
 #' # fit the model and visualize the estimated graphs
-#' (out <- covdepGE(X, Z, nssq = 2, nsbsq = 2, npip = 2))
+#' (out <- covdepGE(X, Z))
 #' plot(out)
 #'
 #' # visualize the posterior inclusion probabilities for variables (1, 3) and (1, 2)
 #' inclusionCurve(out, 1, 2)
 #' inclusionCurve(out, 1, 3)
+#' }
 ## -----------------------------------------------------------------------------
 inclusionCurve <- function(out, col_idx1, col_idx2, line_type = "solid",
                            line_size = 0.5, line_color = "black",
@@ -281,6 +289,8 @@ inclusionCurve <- function(out, col_idx1, col_idx2, line_type = "solid",
 }
 
 ## -----------------------------------------------------------------------------
+## Distributed under GPL (≥ 3) license
+#'
 #' @title Plot the Graphs Estimated by `covdepGE`
 #' @export
 ## -----------------------------------------------------------------------------
@@ -302,6 +312,7 @@ inclusionCurve <- function(out, col_idx1, col_idx2, line_type = "solid",
 #' by `covdepGE`
 ## -----------------------------EXAMPLES----------------------------------------
 #' @examples
+#' \dontrun{
 #' library(ggplot2)
 #'
 #' # get the data
@@ -341,12 +352,13 @@ inclusionCurve <- function(out, col_idx1, col_idx2, line_type = "solid",
 #'                  n1 + n2 + 1, ",...,", n1 + n2 + n3))
 #'
 #' # fit the model and visualize the estimated graphs
-#' (out <- covdepGE(X, Z, nssq = 2, nsbsq = 2, npip = 2))
+#' (out <- covdepGE(X, Z))
 #' plot(out)
 #'
 #' # visualize the posterior inclusion probabilities for variables (1, 3) and (1, 2)
 #' inclusionCurve(out, 1, 2)
 #' inclusionCurve(out, 1, 3)
+#' }
 ## -----------------------------------------------------------------------------
 plot.covdepGE <- function(x, graph_colors = NULL, title_sum = TRUE, ...){
 

@@ -9,6 +9,8 @@
 [![Codecov test
 coverage](https://codecov.io/gh/JacobHelwig/covdepGE/branch/master/graph/badge.svg)](https://app.codecov.io/gh/JacobHelwig/covdepGE?branch=master)
 [![R-CMD-check](https://github.com/JacobHelwig/covdepGE/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/JacobHelwig/covdepGE/actions/workflows/R-CMD-check.yaml)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/covdepGE)](https://CRAN.R-project.org/package=covdepGE)
 <!-- badges: end -->
 
 The conditional dependence structure (CDS) of a data matrix with $p$
@@ -43,11 +45,15 @@ perform inference. Finally, `covdepGE` offers several wrappers around
 
 ## Installation
 
-<!-- You can install the released version of covdepGE from [CRAN](https://CRAN.R-project.org) with: -->
-<!-- ``` r -->
-<!-- install.packages("covdepGE") -->
-<!-- ``` -->
-<!-- And the development version from [GitHub](https://github.com/) with: -->
+You can install the released version of covdepGE from
+[CRAN](https://cran.r-project.org/package=covdepGE) with:
+
+``` r
+install.packages("covdepGE")
+```
+
+And the development version from
+[GitHub](https://github.com/JacobHelwig/covdepGE) with:
 
 ``` r
 # install.packages("devtools")
@@ -90,6 +96,7 @@ ggplot(data.frame(Z = Z, interval = as.factor(interval))) +
 <img src="man/figures/README-example-1.png" width="100%" />
 
 ``` r
+
 # visualize the true precision matrices in each of the intervals
 
 # interval 1
@@ -100,6 +107,7 @@ matViz(prec[[1]], incl_val = TRUE) +
 <img src="man/figures/README-example-2.png" width="100%" />
 
 ``` r
+
 # interval 2 (varies continuously with Z)
 cat("\nInterval 2, observations ", n1 + 1, ",...,", n1 + n2, sep = "")
 #> 
@@ -124,6 +132,7 @@ lapply(int2_inds, function(j) matViz(int2_mats[[j]], incl_val = TRUE) +
 <img src="man/figures/README-example-5.png" width="100%" />
 
 ``` r
+
 # interval 3
 matViz(prec[[length(prec)]], incl_val = TRUE) +
   ggtitle(paste0("True precision matrix, interval 3, observations ",
@@ -133,6 +142,7 @@ matViz(prec[[length(prec)]], incl_val = TRUE) +
 <img src="man/figures/README-example-6.png" width="100%" />
 
 ``` r
+
 # fit the model and visualize the estimated graphs
 (out <- covdepGE(X, Z, parallel = T, num_workers = p))
 #> Warning in covdepGE(X, Z, parallel = T, num_workers = p): No registered workers
@@ -141,7 +151,7 @@ matViz(prec[[length(prec)]], incl_val = TRUE) +
 #> 
 #> ELBO: -171501.68                                             # Unique Graphs: 3
 #> n: 180, variables: 5                       Hyperparameter grid size: 125 points
-#> Model fit completed in 3.019 secs
+#> Model fit completed in 2.229 secs
 plot(out)
 #> [[1]]
 ```
@@ -159,6 +169,7 @@ plot(out)
 <img src="man/figures/README-example-9.png" width="100%" />
 
 ``` r
+
 # visualize the posterior inclusion probabilities for variables (1, 3) and (1, 2)
 inclusionCurve(out, 1, 2)
 ```
@@ -172,6 +183,9 @@ inclusionCurve(out, 1, 3)
 <img src="man/figures/README-example-11.png" width="100%" />
 
 ## Methods
+
+Math is correctly rendered in the version of this document available on
+[CRAN](https://CRAN.R-project.org/package=covdepGE/readme/README.html).
 
 ### Overview
 
@@ -346,10 +360,10 @@ of $Z$, and the updated bandwidths from the second step are used for
 
 ### Bibliography
 
-1.  Sutanoy Dasgupta, Peng Zhao, Prasenjit Ghosh, Debdeep Pati, and Bani
+1)  Sutanoy Dasgupta, Peng Zhao, Prasenjit Ghosh, Debdeep Pati, and Bani
     Mallick. An approximate Bayesian approach to covariate-dependent
     graphical modeling. pages 1–59, 2022.
 
-2.  Sutanoy Dasgupta, Debdeep Pati, and Anuj Srivastava. A Two-Step
+2)  Sutanoy Dasgupta, Debdeep Pati, and Anuj Srivastava. A Two-Step
     Geometric Framework For Density Modeling. *Statistica Sinica*,
     30(4):2155–2177, 2020.
